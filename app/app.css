@@ -23,3 +23,52 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.month {
+	width: 280px;
+	margin: 0 10px;
+	float: left;
+}
+
+.date {
+	float:left;
+	width: 40px;
+	text-align: center;
+}
+
+.invalid .date-value {
+	visibility: hidden;
+}
+
+.invalid {
+	background-color: #a9a9a9;
+}
+
+.week {
+	background-color: #3c763d;
+}
+
+.weekend {
+	background-color: #ffff00;
+}
+
+.holiday {
+	background-color: #ffa500;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+.view1 {
+	padding-top: 20px;
+}

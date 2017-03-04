@@ -1,0 +1,6 @@
+<div class="date" ng-repeat="date in months" ng-class="{week: date.dayType == 'week', weekend: date.dayType == 'weekend', invalid: date.dayType == 'invalid', holiday: date.dayType == 'holiday'}">
+	<div class="date-value">
+		{{date.getDate()}}
+	</div>
+	<md-tooltip ng-if="date.dayType == 'holiday'" md-direction="left">{{date.holidayName}}</md-tooltip>
+</div>

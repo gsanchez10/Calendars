@@ -4,11 +4,19 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'myApp.services',
+  'ngMaterial'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
+
+Date.prototype.getMonthName = function() {
+	var monthNames = ["January", "February", "March", "April", "May", "June",
+	  "July", "August", "September", "October", "November", "December"
+	];
+
+	return monthNames[this.getMonth()];
+};

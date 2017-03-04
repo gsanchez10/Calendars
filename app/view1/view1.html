@@ -1,1 +1,29 @@
-<p>This is the partial for view 1.</p>
+<div class="view1 container-fluid">
+	<form name="form" ng-submit="submit()" role="form">
+	    <div class="row">
+	        <div class="col-sm-2">
+	            <div class="form-group">
+	            	<label for="date">Date:</label>
+	                <input type="date" name="date" ng-model="initialDate"/>
+	            </div>
+	        </div>
+	        <div class="col-sm-3">
+	            <div class="form-group">
+	            	<label for="days">Number of days:</label>
+	                <input type="number" name="days" ng-model="days" min="1" value="1"/>
+	            </div>
+	        </div>
+	        <div class="col-sm-3">
+	            <div class="form-group">
+	            	<label for="countryCode">Country Code:</label>
+	                <input type="text" name="countryCode" ng-model="countryCode"/>
+	            </div>
+	        </div>
+	        <div class="col-sm-2">
+	        	<input type="submit" value="Calculate"/>
+	        </div>
+	    </div>
+	</form>
+
+	<month></month>
+</div>
